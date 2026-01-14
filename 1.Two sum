@@ -1,0 +1,10 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        hash_table={}
+        n=len(nums)
+        for i in range(n):
+            inverse=target-nums[i]
+            if inverse in hash_table:
+                return [hash_table[inverse],i]
+            hash_table[nums[i]]=i
+        return []
